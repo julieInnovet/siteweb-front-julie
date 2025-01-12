@@ -1,0 +1,105 @@
+---
+import '@fontsource-variable/inter';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Julie Samama, vétérinaire équine itinérante au service de vos chevaux" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  </head>
+  <body class="bg-white text-gray-900">
+    <header class="bg-primary text-white">
+      <nav class="container mx-auto px-4">
+        <div class="flex justify-between items-center h-20">
+          <a href="/" class="flex items-center">
+            <img 
+              src="/images/logo.png" 
+              alt="Logo Dr. Julie Samama - Vétérinaire équine"
+              class="h-16 w-auto"
+            />
+          </a>
+          <div class="hidden md:flex space-x-8">
+            <a href="/" class="hover:text-secondary transition-colors">Accueil</a>
+            <a href="/about" class="hover:text-secondary transition-colors">À propos</a>
+            <a href="/services" class="hover:text-secondary transition-colors">Services</a>
+            <a href="/equipment" class="hover:text-secondary transition-colors">Équipements</a>
+            <a href="/pricing" class="hover:text-secondary transition-colors">Tarifs</a>
+            <a href="/client" class="hover:text-secondary transition-colors">Espace Client</a>
+          </div>
+          <!-- Mobile menu button -->
+          <button class="md:hidden p-2 rounded-lg hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-white">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+        <!-- Mobile menu (hidden by default) -->
+        <div class="md:hidden hidden">
+          <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="/" class="block px-3 py-2 rounded-md hover:bg-primary-dark">Accueil</a>
+            <a href="/about" class="block px-3 py-2 rounded-md hover:bg-primary-dark">À propos</a>
+            <a href="/services" class="block px-3 py-2 rounded-md hover:bg-primary-dark">Services</a>
+            <a href="/equipment" class="block px-3 py-2 rounded-md hover:bg-primary-dark">Équipements</a>
+            <a href="/pricing" class="block px-3 py-2 rounded-md hover:bg-primary-dark">Tarifs</a>
+            <a href="/client" class="block px-3 py-2 rounded-md hover:bg-primary-dark">Espace Client</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <main>
+      <slot />
+    </main>
+
+    <footer class="bg-primary text-white mt-20">
+      <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">Contact</h3>
+            <p>241 route du bois de la pierre</p>
+            <p>31370 Bérat</p>
+            <p>Tél : 06 70 49 46 14</p>
+            <p>Email : julie.samama@gmail.com</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Liens rapides</h3>
+            <ul class="space-y-2">
+              <li><a href="/about" class="hover:text-secondary">À propos</a></li>
+              <li><a href="/services" class="hover:text-secondary">Services</a></li>
+              <li><a href="/equipment" class="hover:text-secondary">Équipements</a></li>
+              <li><a href="/pricing" class="hover:text-secondary">Tarifs</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Horaires</h3>
+            <p>Disponible sur rendez-vous</p>
+            <p class="text-secondary font-bold mt-2">Urgences 24h/24 - 7j/7</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuButton = document.querySelector('button');
+      const mobileMenu = document.querySelector('.md\\:hidden.hidden');
+
+      menuButton?.addEventListener('click', () => {
+        mobileMenu?.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+---
+import Layout from '../layouts/Layout.astro';
+import EmergencyButton from '../components/EmergencyButton.astro';
+import ContactForm from '../components/ContactForm.astro';
+---
+
+<Layout title="Julie Samama - Vétérinaire équine itinérante">
+  <EmergencyButton />
+  
+  <!-- Hero Section -->
+  <section class="relative bg-primary text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Julie Samama, vétérinaire équine itinérante au service de vos chevaux
+        </h1>
+        <p class="text-xl mb-8">Des soins professionnels et attentionnés pour vos équidés, directement à votre écurie</p>
+        <a href="#contact" class="bg-secondary text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-opacity-90 transition-colors inline-block">
+          Prendre rendez-vous
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
+          <img 
+            src="/images/julie-samama.jpg" 
+            alt="Dr. Julie Samama, vétérinaire équine"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold mb-6">Qui suis-je ?</h2>
+          <p class="text-lg text-gray-700 mb-6">
+            Julie Samama, vétérinaire équine itinérante, je suis à vos côtés pour garantir le bien-être de vos chevaux. Forte de plus de 15 ans d'expérience, je combine savoir-faire traditionnel et technologies modernes pour offrir des soins de qualité.
+          </p>
+          <a href="/about" class="inline-flex items-center text-primary font-semibold hover:text-secondary">
+            En savoir plus
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 text-primary">Mes services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <a href="/services/medecine-generale" class="group">
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow border-2 border-transparent hover:border-secondary">
+            <div class="flex items-center mb-4">
+              <svg class="h-8 w-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+              <h3 class="text-xl font-bold ml-4 group-hover:text-secondary transition-colors">Médecine générale</h3>
+            </div>
+            <p class="text-gray-600">Consultations, vaccinations, et soins préventifs pour maintenir la santé de votre cheval.</p>
+          </div>
+        </a>
+
+        <a href="/services/dentisterie-equine" class="group">
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow border-2 border-transparent hover:border-secondary">
+            <div class="flex items-center mb-4">
+              <svg class="h-8 w-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+              <h3 class="text-xl font-bold ml-4 group-hover:text-secondary transition-colors">Dentisterie</h3>
+            </div>
+            <p class="text-gray-600">Soins dentaires complets pour le bien-être et le confort de votre cheval.</p>
+          </div>
+        </a>
+
+        <a href="/services/urgences" class="group">
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-shadow border-2 border-transparent hover:border-secondary">
+            <div class="flex items-center mb-4">
+              <svg class="h-8 w-8 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h3 class="text-xl font-bold ml-4 group-hover:text-secondary transition-colors">Urgences</h3>
+            </div>
+            <p class="text-gray-600">Disponible 24h/24 et 7j/7 pour les situations d'urgence.</p>
+          </div>
+        </a>
+      </div>
+      <div class="text-center mt-12">
+        <a href="/services" class="inline-flex items-center bg-primary text-white px-8 py-4 rounded-md hover:bg-opacity-90 transition-colors text-lg font-semibold">
+          Découvrir tous nos services
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Zone d'intervention</h2>
+      <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+        <div class="md:col-span-2 bg-white p-8 rounded-lg shadow-md">
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-bold mb-3">Adresse</h3>
+              <p class="text-gray-700">241 route du bois de la pierre, 31370 Bérat</p>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-3">Périmètre</h3>
+              <p class="text-gray-700">J'interviens dans un rayon de 50 km autour de Bérat.</p>
+            </div>
+          </div>
+        </div>
+        <div class="md:col-span-3">
+          <div id="map" class="h-[400px] rounded-lg shadow-md"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-3xl font-bold mb-6">Contactez-moi</h2>
+          <div class="space-y-4">
+            <p class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              06 70 49 46 14
+            </p>
+            <p class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              julie.samama@gmail.com
+            </p>
+            <p class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              241 route du bois de la pierre, 31370 Bérat
+            </p>
+          </div>
+        </div>
+        <ContactForm />
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import L from 'leaflet';
+
+    // Initialize map
+    const map = L.map('map').setView([43.3833, 1.2333], 10);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Add marker for office location
+    L.marker([43.3833, 1.2333]).addTo(map)
+      .bindPopup('Cabinet vétérinaire<br>Julie Samama')
+      .openPopup();
+
+    // Add circle for intervention zone
+    L.circle([43.3833, 1.2333], {
+      color: '#61beae',
+      fillColor: '#61beae',
+      fillOpacity: 0.2,
+      radius: 50000
+    }).addTo(map);
+  </script>
+</Layout>
